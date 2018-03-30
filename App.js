@@ -1,17 +1,16 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import HomeContainer from './src/containers/HomeContainer'
-import configStore from './src/stores/configStore'
-import { Provider } from 'react-redux'
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import HomeContainer from "./src/containers/HomeContainer";
+// import { configStore } from "./src/stores/configStore";
+import { Provider } from "react-redux";
+import { configStore } from './src/store/configStore'
 
-const store = configStore()
+const store = configStore();
 
 export default class App extends React.Component {
   render() {
     return (
-      <Provider
-        style={styles.container}
-        store={store} >
+      <Provider style={styles.container} store={store}>
         <HomeContainer />
       </Provider>
     );
@@ -21,6 +20,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
 });

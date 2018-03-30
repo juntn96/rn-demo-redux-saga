@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import HomeComponent from '../components/HomeComponent'
-import { fetchingItem, addItem, removeItem } from '../stores/actions/todoActions'
+import { fetchingItem, addItem, removeItem } from '../store/actions/todoActions'
 
 const mapStateToProps = state => {
     return {

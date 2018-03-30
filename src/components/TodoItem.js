@@ -83,11 +83,12 @@ class TodoItem extends PureComponent {
                         />
                     </TouchableOpacity>
                     <TextInput
+                        value={item.content}
                         ref={ref => this._textInput = ref}
                         onSubmitEditing={this._onSubmitEditing}
                         underlineColorAndroid={'transparent'}
                         style={styles.input}
-                    >{item.content}</TextInput>
+                    />
                 </View>
             </Swipeout>
         );
